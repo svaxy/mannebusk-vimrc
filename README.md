@@ -1,4 +1,4 @@
 mannebusk-vimrc
 ===============
 
-My vim configuration
+My vim setup

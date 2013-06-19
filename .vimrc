@@ -30,7 +30,12 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-set encoding=utf-8
+" Encoding
+set enc=utf-8
+set nobomb
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
+
 set scrolloff=3
 set autoindent
 set showmode
@@ -65,11 +70,3 @@ vnoremap / /\v
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-
-" Rainbow Parentheses
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces

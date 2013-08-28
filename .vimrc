@@ -6,7 +6,7 @@ filetype plugin indent on
 colorscheme monokai
 "set guifont=Emilbus\ Mono
 
-let mapleader = ","
+let mapleader="'"
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -18,8 +18,16 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" Auto brackets
+inoremap {}H {}<Esc>i
+inoremap ()H ()<Esc>i
+inoremap {{}}H {{}}<Esc>hhi
+
+" New line in normal mode
+nnoremap <leader>o <i>o<ESC>
+
 " Alternative way to get back to normal mode
-inoremap jj <ESC>ust fine under Linux; I only
+inoremap jj <ESC>
 
 " Get rid of all the crap that Vim does to be vi compatible
 set nocompatible
@@ -40,7 +48,7 @@ set nobomb
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8,prc
 
-set scrolloff=3
+set scrolloff=10
 set autoindent
 set showmode
 set showcmd

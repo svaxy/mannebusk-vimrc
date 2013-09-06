@@ -32,6 +32,17 @@ inoremap jj <ESC>
 " Get rid of all the crap that Vim does to be vi compatible
 set nocompatible
 
+" Use omni completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" Auto close Grep result
+autocmd BufLeave * ccl
+
+" GUI OPTIONS
+:set guioptions+=mTrlbL  " fix to be able to remove in one line
+:set guioptions-=mTrlbL  " remove gui stuff
+
 " Tab settings
 set tabstop=4
 set shiftwidth=4
@@ -80,4 +91,6 @@ set noswapfile " Don't create swapfiles (not fun using git)
 set wrap
 set textwidth=79
 set formatoptions=qrn
-" set guioptions=
+
+" Grep settings
+let Grep_Default_Options = '-rs'

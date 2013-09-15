@@ -36,8 +36,9 @@ set nocompatible
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" Toggle nerdtree
-map <C-n> :NERDTreeToggle<CR>
+" NerdTree settings
+map <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
+let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " Auto close Grep result
 autocmd BufLeave * ccl

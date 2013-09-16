@@ -10,7 +10,7 @@ set guifont=Ubuntu\ Mono\ 12
 :set guioptions+=mTrlbL  " fix to be able to remove in one line
 :set guioptions-=mTrlbL  " remove gui stuff
 
-let mapleader="-"
+let mapleader="'"
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -28,7 +28,8 @@ inoremap ()H ()<Esc>i
 inoremap {{}}H {{}}<Esc>hhi
 
 " New line in normal mode
-nnoremap <leader>o <i>o<ESC>
+nnoremap <S-Enter> o<Esc>
+nnoremap <S-BackSpace> O<Esc>
 
 " Alternative way to get back to normal mode
 inoremap jj <ESC>

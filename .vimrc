@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 " GUI OPTIONS
-colorscheme monokai
+colorscheme monokaimanne
 set guifont=Ubuntu\ Mono\ 12
 
 :set guioptions+=mTrlbL  " fix to be able to remove in one line

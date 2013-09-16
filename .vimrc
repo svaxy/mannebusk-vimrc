@@ -10,7 +10,7 @@ set guifont=Ubuntu\ Mono\ 12
 :set guioptions+=mTrlbL  " fix to be able to remove in one line
 :set guioptions-=mTrlbL  " remove gui stuff
 
-let mapleader="'"
+let mapleader="-"
 
 " Disable arrow keys
 nnoremap <up> <nop>
@@ -42,10 +42,14 @@ set omnifunc=syntaxcomplete#Complete
 
 " NerdTree settings
 map <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
+map <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
+"autocmd BufLeave * <C-n>
 
-" Auto close Grep result
-autocmd BufLeave * ccl
+" Grep settings
+let Grep_Default_Options = '-rs'
+autocmd BufLeave * ccl " Auto close Grep result
+nnoremap <Leader>g :ProjectRootExe Grep<space>
 
 " Tab settings
 set tabstop=4
@@ -96,5 +100,3 @@ set wrap
 set textwidth=79
 set formatoptions=qrn
 
-" Grep settings
-let Grep_Default_Options = '-rs'

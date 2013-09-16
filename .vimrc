@@ -3,8 +3,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" GUI OPTIONS
 colorscheme monokai
-"set guifont=Emilbus\ Mono
+set guifont=Ubuntu\ Mono\ 12
+
+:set guioptions+=mTrlbL  " fix to be able to remove in one line
+:set guioptions-=mTrlbL  " remove gui stuff
 
 let mapleader="'"
 
@@ -42,10 +46,6 @@ let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " Auto close Grep result
 autocmd BufLeave * ccl
-
-" GUI OPTIONS
-:set guioptions+=mTrlbL  " fix to be able to remove in one line
-:set guioptions-=mTrlbL  " remove gui stuff
 
 " Tab settings
 set tabstop=4

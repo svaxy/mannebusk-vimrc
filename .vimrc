@@ -6,7 +6,7 @@ filetype plugin indent on
 " GUI OPTIONS
 colorscheme monokaimanne
 set guifont=Ubuntu\ Mono\ 12
-
+set guioptions= " Remove gui elements
 :set guioptions+=mTrlbL  " fix to be able to remove in one line
 :set guioptions-=mTrlbL  " remove gui stuff
 
@@ -41,9 +41,13 @@ set nocompatible
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" Automatically cd to current project
+autocmd BufEnter * ProjectRootCD
+
 " NerdTree settings
-map <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
-map <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
+nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
+nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
+nnoremap <leader>np :NERDTree /var/www/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 "autocmd BufLeave * <C-n>
 
@@ -51,6 +55,10 @@ let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 let Grep_Default_Options = '-rs'
 autocmd BufLeave * ccl " Auto close Grep result
 nnoremap <Leader>g :ProjectRootExe Grep<space>
+
+" Grunt & Compass
+nnoremap <leader>gb :ProjectRootExe !grunt --no-color build<CR>
+nnoremap <leader>cb :ProjectRootExe !compass compile<CR>
 
 " Tab settings
 set tabstop=4

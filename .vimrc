@@ -49,14 +49,14 @@ autocmd BufEnter * ProjectRootCD
 " NerdTree settings
 nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
 nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
-nnoremap <leader>np :NERDTree /var/www/
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>no :NERDTree /var/www/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
-"autocmd BufLeave * <C-n>
 
 " Grep settings
 let Grep_Default_Options = '-rs'
 autocmd BufLeave * ccl " Auto close Grep result
-nnoremap <Leader>g :ProjectRootExe Grep<space>
+nnoremap <Leader>g Grep<space>
 
 " Grunt & Compass
 nnoremap <leader>gb :ProjectRootExe !grunt --no-color build<CR>
@@ -68,6 +68,18 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 
 " XmlLint
 nnoremap <leader>xv :!xmllint --noout %<CR>
+
+" TagList
+nnoremap <leader>t :TlistToggle<CR>
+let Tlist_Show_One_File = 0
+let Tlist_Show_Menu = 1
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Process_File_Always = 1
+let Tlist_Use_Horiz_Window = 0
+let Tlist_Use_Right_Window = 1
+
 
 " Tab settings
 set tabstop=4

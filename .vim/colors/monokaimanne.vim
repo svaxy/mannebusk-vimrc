@@ -14,9 +14,12 @@ let g:colors_name = "monokaimanne"
 
 hi clear Directory
 
-hi Directory    guifg=#a6e22e
-hi TabLine      guifg=#90908a guibg=#3c3d37 
-hi TabLineFill  guifg=#64645e
-hi TabLineSel   guifg=#333333 guibg=#ae81ff
-hi Title        guifg=#f8f8f2 guibg=#64645e
+hi Directory        guifg=#a6e22e
+hi TabLine          guifg=#90908a guibg=#3c3d37 
+hi TabLineFill      guifg=#64645e
+hi TabLineSel       guifg=#333333 guibg=#ae81ff
+hi Title            guifg=#f8f8f2 guibg=#64645e
+
+hi MyTagListComment     guifg=#3c3d37 guibg=#90908a
+hi MyTagListFileName    guifg=#eeeeee guibg=#64645e
 

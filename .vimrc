@@ -96,6 +96,10 @@ nnoremap è <C-w>h
 nnoremap ê <C-w>j
 nnoremap ë <C-w>k
 
+" Jump between tabs
+nnoremap <leader>h 1gT
+nnoremap <leader>l 2gT
+
 " Encoding
 set enc=utf-8
 set nobomb

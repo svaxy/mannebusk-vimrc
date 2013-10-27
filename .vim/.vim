@@ -1,0 +1,1 @@
+/home/manne/mannebusk-vimrc/.vim

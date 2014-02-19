@@ -106,6 +106,9 @@ set nobomb
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8,prc
 
+" Make dashes part of word
+set lisp
+
 set scrolloff=10
 set autoindent
 set showmode

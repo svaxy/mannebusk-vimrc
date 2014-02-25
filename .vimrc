@@ -69,6 +69,9 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " XmlLint
 nnoremap <leader>xv :!xmllint --noout %<CR>
 
+" Emmet trigger key
+imap <leader>e <C-y>,
+
 " TagList
 nnoremap <leader>t :TlistToggle<CR>
 let Tlist_Show_One_File = 0

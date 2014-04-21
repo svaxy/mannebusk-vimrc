@@ -5,7 +5,7 @@ filetype plugin indent on
 
 " GUI OPTIONS
 colorscheme monokaimanne
-set guifont=Ubuntu\ Mono\ 12
+set guifont=Andale\ Mono:h13
 set guioptions= " Remove gui elements
 :set guioptions+=mTrlbL  " fix to be able to remove in one line
 :set guioptions-=mTrlbL  " remove gui stuff
@@ -50,7 +50,7 @@ autocmd BufEnter * ProjectRootCD
 nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
 nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>no :NERDTree /var/www/
+nnoremap <leader>no :NERDTree ~/projects/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " Grep settings
@@ -94,10 +94,10 @@ set expandtab
 nnoremap <C-H> :bp<cr>
 nnoremap <C-L> :bn<cr>
 " Navigate windows with alt + direction keys
-nnoremap ì <C-w>l
-nnoremap è <C-w>h
-nnoremap ê <C-w>j
-nnoremap ë <C-w>k
+nnoremap ﬁ <C-w>l
+nnoremap ˛ <C-w>h
+nnoremap √ <C-w>j
+nnoremap ª <C-w>k
 
 " Jump between tabs
 nnoremap <leader>h 1gT
@@ -129,7 +129,8 @@ set backspace=indent,eol,start
 set laststatus=2
 set title
 " set undofile
-set clipboard=unnamedplus   " Use system clipboard registry
+" set clipboard=unnamedplus   " Use system clipboard registry (Ubuntu)
+set clipboard=unnamed    " Use system clipboard registry (OS X)
 
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo

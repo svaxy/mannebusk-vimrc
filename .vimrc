@@ -4,11 +4,15 @@ syntax on
 filetype plugin indent on
 
 " GUI OPTIONS
-colorscheme monokaimanne
-set guifont=Andale\ Mono:h13
+colorscheme gruvbox
+set background=dark    " Setting dark mode
+let g:gruvbox_italicize_comments = 1
+let g:gruvbox_italicize_strings = 1
+set guifont=Andale\ Mono:h12
 set guioptions= " Remove gui elements
 :set guioptions+=mTrlbL  " fix to be able to remove in one line
 :set guioptions-=mTrlbL  " remove gui stuff
+
 
 let mapleader="'"
 
@@ -42,15 +46,15 @@ filetype on
 filetype plugin on
 filetype indent on
 set omnifunc=syntaxcomplete#Complete
-
 " Automatically cd to current project
 autocmd BufEnter * ProjectRootCD
+autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\^@", "", "")
 
 " NerdTree settings
 nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
 nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>no :NERDTree ~/projects/
+nnoremap <leader>no :NERDTree /Volumes/Shares/projects/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " Grep settings
@@ -147,4 +151,3 @@ set noswapfile " Don't create swapfiles (not fun using git)
 set wrap
 set textwidth=79
 set formatoptions=qrn
-

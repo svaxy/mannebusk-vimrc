@@ -48,13 +48,13 @@ filetype indent on
 set omnifunc=syntaxcomplete#Complete
 " Automatically cd to current project
 autocmd BufEnter * ProjectRootCD
-autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\^@", "", "")
+autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
 
 " NerdTree settings
 nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
 nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>no :NERDTree /Volumes/Shares/projects/
+nnoremap <leader>no :NERDTree ~/www/dev/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " Grep settings

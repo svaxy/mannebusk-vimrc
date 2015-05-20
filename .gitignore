@@ -5,3 +5,6 @@ Makefile
 *.log
 *.bundle
 .netrwhist
+
+.vim/bundle/*
+!.vim/bundle/Vundle.vim

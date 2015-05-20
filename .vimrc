@@ -1,13 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Manne Busk's Vim Configuration
 "
-
-
-" Pathogen, to have all plugins neatly in one folder
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
+let mapleader="'"
+source ~/.vim-plugins
 
 
 """"""
@@ -15,7 +10,7 @@ filetype plugin indent on
 "
 
 " Theme
-colorscheme feral
+" colorscheme feral
 set background=dark
 
 " Font
@@ -46,9 +41,6 @@ set guioptions= " Remove gui elements
 nnoremap <S-Enter> o<Esc>
 nnoremap <S-BackSpace> O<Esc>
 
-" Set tab name automatically
-autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
-
 " XML Lint
 nnoremap <leader>xv :!xmllint --noout %<CR>
 
@@ -60,44 +52,48 @@ nnoremap <leader>xv :!xmllint --noout %<CR>
 
 " ProjectRootCD - Automatically cd to current project
 autocmd BufEnter * ProjectRootCD
+nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 
 " NerdTree
 nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree
-nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>no :NERDTree ~/www/dev/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " CloseTags
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1 
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetags/plugin/closetag.vim
 
 " Emmet
 imap <leader>e <C-y>,
 
+" TName
+" Set tab name automatically
+autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
+
 "PHPDoc
-source ~/.vim/bundle/php-doc-vim/php-doc.vim 
-inoremap <Leader>p <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <Leader>p :call PhpDocSingle()<CR> 
-vnoremap <Leader>p :call PhpDocRange()<CR> 
-let g:pdv_cfg_Type = "mixed"
-let g:pdv_cfg_Package = "Webbhuset"
-let g:pdv_cfg_Version = "$id$"
-let g:pdv_cfg_Author = "Webbhuset <info@webbhuset.se>"
-let g:pdv_cfg_Copyright = "2014 Webbhuset"
-let g:pdv_cfg_License = "Proprietary"
-let g:pdv_cfg_ReturnVal = "$this"
+" source ~/.vim/bundle/php-doc-vim/php-doc.vim 
+ inoremap <Leader>p <ESC>:call PhpDocSingle()<CR>i 
+ nnoremap <Leader>p :call PhpDocSingle()<CR> 
+ vnoremap <Leader>p :call PhpDocRange()<CR> 
+ let g:pdv_cfg_Type = "mixed"
+ let g:pdv_cfg_Package = "Webbhuset"
+ let g:pdv_cfg_Version = "$id$"
+ let g:pdv_cfg_Author = "Webbhuset <info@webbhuset.se>"
+ let g:pdv_cfg_Copyright = "2014 Webbhuset"
+ let g:pdv_cfg_License = "Proprietary"
+ let g:pdv_cfg_ReturnVal = "$this"
 
 " Taglist
-nnoremap <leader>t :TlistToggle<CR>
-let Tlist_Show_One_File = 0
-let Tlist_Show_Menu = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Process_File_Always = 1
-let Tlist_Use_Horiz_Window = 0
-let Tlist_Use_Right_Window = 1
+" nnoremap <leader>t :TlistToggle<CR>
+" let Tlist_Show_One_File = 0
+" let Tlist_Show_Menu = 1
+" let Tlist_File_Fold_Auto_Close = 1
+" let Tlist_GainFocus_On_ToggleOpen = 1
+" let Tlist_Close_On_Select = 1
+" let Tlist_Process_File_Always = 1
+" let Tlist_Use_Horiz_Window = 0
+" let Tlist_Use_Right_Window = 1
 
 
 
@@ -120,9 +116,6 @@ nnoremap <C-L> :bn<cr>
 """"""
 " GENERAL SETTINGS
 "
-
-" Leader key
-let mapleader="'"
 
 " Grep settings
 let Grep_Default_Options = '-rs'

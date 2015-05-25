@@ -19,7 +19,7 @@ if has("unix")
     let s:uname = substitute(system("uname -s"), '\n', '', '')
     if s:uname == 'Darwin'
         " OS X fonts
-        set guifont=Andale\ Mono:h11
+        set guifont=Andale\ Mono:h12
     else
         " Linux fonts
         set guifont=Fira\ Mono\ 11
@@ -84,17 +84,6 @@ autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
  let g:pdv_cfg_License = "Proprietary"
  let g:pdv_cfg_ReturnVal = "$this"
 
-" Taglist
-" nnoremap <leader>t :TlistToggle<CR>
-" let Tlist_Show_One_File = 0
-" let Tlist_Show_Menu = 1
-" let Tlist_File_Fold_Auto_Close = 1
-" let Tlist_GainFocus_On_ToggleOpen = 1
-" let Tlist_Close_On_Select = 1
-" let Tlist_Process_File_Always = 1
-" let Tlist_Use_Horiz_Window = 0
-" let Tlist_Use_Right_Window = 1
-
 
 
 """"""
@@ -106,10 +95,6 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-
-" Navigate buffers
-nnoremap <C-H> :bp<cr>
-nnoremap <C-L> :bn<cr>
 
 
 

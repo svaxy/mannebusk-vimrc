@@ -20,6 +20,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tab-name'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'evidens/vim-twig'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on

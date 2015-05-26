@@ -9,7 +9,6 @@ call vundle#begin()
 " Plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'vim-scripts/closetag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'editorconfig/editorconfig-vim'

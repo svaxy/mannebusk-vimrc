@@ -95,6 +95,31 @@ let g:pdv_cfg_Copyright = "2014 Webbhuset"
 let g:pdv_cfg_License = "Proprietary"
 let g:pdv_cfg_ReturnVal = "$this"
 
+" AirLine
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+set ttimeoutlen=50
+
+let g:powerline_symbols = 'fancy'
+let g:airline_theme = 'zenburn'
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#format = 1
+
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
 
 
 """"""

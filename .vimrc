@@ -53,7 +53,10 @@ nnoremap <C-r><C-l> :source ~/.vimrc<CR>
 "
 
 " ProjectRootCD - Automatically cd to current project
-autocmd BufEnter * ProjectRootCD
+augroup projectrootcd
+    autocmd!
+    autocmd BufEnter * ProjectRootCD
+augroup END 
 nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 
 " NerdTree
@@ -63,15 +66,21 @@ nnoremap <leader>no :NERDTree ~/www/dev/
 let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 
 " CloseTags
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1 
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetags/plugin/closetag.vim
+augroup closetags
+    autocmd!
+    autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1 
+    autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetags/plugin/closetag.vim
+augroup END
 
 " Emmet
 imap <leader>e <C-y>,
 
 " TName
 " Set tab name automatically
-autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
+augroup tabname
+    autocmd!
+    autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
+augroup END
 
 "PHPDoc
 " source ~/.vim/bundle/php-doc-vim/php-doc.vim 
@@ -106,7 +115,10 @@ nnoremap <right> <nop>
 
 " Grep settings
 let Grep_Default_Options = '-rs'
-autocmd BufLeave * ccl " Auto close Grep result
+augroup grep
+    autocmd!
+    autocmd BufLeave * ccl " Auto close Grep result
+augroup END
 nnoremap <Leader>g Grep<space>
 
 " Encoding

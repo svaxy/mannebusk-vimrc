@@ -149,9 +149,14 @@ set backspace=indent,eol,start
 set laststatus=2
 set title
 
-" set undofile
-" set clipboard=unnamedplus   " Use system clipboard registry (Ubuntu)
-set clipboard=unnamed    " Use system clipboard registry (OS X)
+if has("unix")
+    let s:uname = substitute(system("uname -s"), '\n', '', '')
+    if s:uname == 'Darwin'
+        set clipboard=unnamed    " Use system clipboard registry (OS X)
+    else
+        set clipboard=unnamedplus   " Use system clipboard registry (Ubuntu)
+    endif
+endif
 
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo

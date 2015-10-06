@@ -56,7 +56,7 @@ nnoremap <C-r><C-l> :source ~/.vimrc<CR>
 augroup projectrootcd
     autocmd!
     autocmd BufEnter * ProjectRootCD
-augroup END 
+augroup END
 nnoremap <leader>n :ProjectRootExe NERDTree<CR> " Open at buffers project root
 
 " NerdTree
@@ -68,7 +68,7 @@ let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 " CloseTags
 augroup closetags
     autocmd!
-    autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1 
+    autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
     autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/vim-closetags/plugin/closetag.vim
 augroup END
 
@@ -83,10 +83,10 @@ augroup tabname
 augroup END
 
 "PHPDoc
-" source ~/.vim/bundle/php-doc-vim/php-doc.vim 
-inoremap <Leader>p <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <Leader>p :call PhpDocSingle()<CR> 
-vnoremap <Leader>p :call PhpDocRange()<CR> 
+" source ~/.vim/bundle/php-doc-vim/php-doc.vim
+inoremap <Leader>p <ESC>:call PhpDocSingle()<CR>i
+nnoremap <Leader>p :call PhpDocSingle()<CR>
+vnoremap <Leader>p :call PhpDocRange()<CR>
 let g:pdv_cfg_Type = "mixed"
 let g:pdv_cfg_Package = "Webbhuset"
 let g:pdv_cfg_Version = "$id$"
@@ -146,7 +146,7 @@ augroup grep
 augroup END
 nnoremap <Leader>g Grep<space>
 
-set listchars=tab:>-,trail:٠,extends:>,precedes:<
+set listchars=tab:>-,trail:٠
 set list
 
 " Encoding
@@ -182,8 +182,8 @@ set number
 set hidden
 set wildmenu
 set wildmode=list:longest
-set visualbell   " No beeping   
-set noerrorbells " No more flashing light 
+set visualbell   " No beeping
+set noerrorbells " No more flashing light
 set cursorline
 set ttyfast
 set ruler

@@ -121,6 +121,9 @@ augroup grep
 augroup END
 nnoremap <Leader>g Grep<space>
 
+set listchars=tab:>-,trail:٠,extends:>,precedes:<
+set list
+
 " Encoding
 set enc=utf-8
 set nobomb

@@ -44,6 +44,8 @@ nnoremap <S-BackSpace> O<Esc>
 " XML Lint
 nnoremap <leader>xv :!xmllint --noout %<CR>
 
+" Reload vimrc
+nnoremap <C-r><C-l> :source ~/.vimrc<CR>
 
 
 """"""

@@ -103,7 +103,7 @@ let g:airline_symbols.space = "\ua0"
 set ttimeoutlen=50
 
 let g:powerline_symbols = 'fancy'
-let g:airline_theme = 'zenburn'
+let g:airline_theme = 'badwolf'
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#format = 1

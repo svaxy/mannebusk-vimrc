@@ -3,14 +3,14 @@
 """
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'mattn/emmet-vim'
-Plug 'grep.vim'
+Plug 'yegappan/grep'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/syntastic'
 Plug 'grep.vim'
 Plug 'dbakker/vim-projectroot'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tab-name'
+Plug 'fweep/vim-tabber'
 Plug 'ervandew/supertab'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -63,15 +63,6 @@ let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 " Emmet
 ""
 imap <leader>e <C-y>, " Expand code
-
-""""
-" TName
-"""
-" Set tab name automatically
-augroup tabname
-    autocmd!
-        autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
-augroup END
 
 """
 " Grep

@@ -16,6 +16,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'elixir-lang/vim-elixir'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Leader Key

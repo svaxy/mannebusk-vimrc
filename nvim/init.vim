@@ -63,7 +63,7 @@ let NERDTreeQuitOnOpen=1        " Automatically close nerdtree on file open
 """
 " Emmet
 ""
-imap <leader>e <C-y>, " Expand code
+imap <leader>e <C-y>,
 
 """
 " Grep

@@ -156,7 +156,7 @@ set ruler
 set title
 set wildmenu
 set wildmode=list:longest
-set number
+set relativenumber
 " History & Undo
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo

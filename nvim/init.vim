@@ -18,6 +18,7 @@ Plug 'morhetz/gruvbox'
 Plug 'elixir-lang/vim-elixir'
 Plug 'sheerun/vim-polyglot'
 Plug 'elmcast/elm-vim'
+Plug 'rhysd/vim-wasm'
 call plug#end()
 
 " Leader Key

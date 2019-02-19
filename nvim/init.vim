@@ -7,7 +7,6 @@ Plug 'yegappan/grep'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/syntastic'
-Plug 'yegappan/grep'
 Plug 'dbakker/vim-projectroot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fweep/vim-tabber'
@@ -19,6 +18,9 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'sheerun/vim-polyglot'
 Plug 'elmcast/elm-vim'
 Plug 'rhysd/vim-wasm'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 call plug#end()
 
 " Leader Key
@@ -77,6 +79,12 @@ augroup grep
 augroup END
 nnoremap <Leader>g Grep<space>
 
+"""
+" SnipMate
+""
+let g:snipMate = {}
+let g:snipMate.snippet_version = 1
+let g:snipMate.description_in_completion = 1
 
 """
 " NAVIGATION SETTINGS

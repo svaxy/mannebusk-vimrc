@@ -29,3 +29,13 @@ else
     echo -e $GREEN"NeoVim configuraion linked into "$NORMAL"~/.config/nvim/init.vim"
     echo -e $GREEN"Complete!"$NORMAL
 fi
+
+INIT_SNIPPETS=~/.config/nvim/snippets/vim.snippets
+if [ -f $INIT_SNIPPETS ]; then
+    echo -e $CYAN"Snippets already linked to "$NORMAL"~/.config/nvim/snippets/"
+    echo -e $RED"FAILED"$NORMAL
+else
+    ln -s $DIR/snippets ~/.config/nvim/snippets
+    echo -e $GREEN"Snippets linked into "$NORMAL"~/.config/nvim/snippets/"
+    echo -e $GREEN"Complete!"$NORMAL
+fi

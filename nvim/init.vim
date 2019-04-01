@@ -14,13 +14,24 @@ Plug 'ervandew/supertab'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'elixir-lang/vim-elixir'
 Plug 'sheerun/vim-polyglot'
-Plug 'elmcast/elm-vim'
-Plug 'rhysd/vim-wasm'
 Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+" Elixir
+Plug 'elixir-lang/vim-elixir'
+" Elm
+Plug 'elmcast/elm-vim'
+" Webassembly
+Plug 'rhysd/vim-wasm'
+" Lisp
+Plug 'guns/vim-sexp'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 
 " Leader Key

@@ -59,6 +59,11 @@ if has("unix")
 endif
 
 """
+" Terminal Settings
+""
+tnoremap <Esc> <C-\><C-n>
+
+"""
 " ProjectRootCD - Automatically cd to current project
 ""
 augroup projectrootcd

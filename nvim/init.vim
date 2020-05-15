@@ -20,18 +20,6 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 " Elixir
 Plug 'elixir-lang/vim-elixir'
-" Elm
-Plug 'elmcast/elm-vim'
-" Webassembly
-Plug 'rhysd/vim-wasm'
-" Lisp
-Plug 'guns/vim-sexp'
-Plug 'guns/vim-clojure-static'
-Plug 'guns/vim-clojure-highlight'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-salve'
-Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 
 " Leader Key
@@ -129,19 +117,6 @@ endif
 ""
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-
-"""
-" ELM
-""
-let g:elm_jump_to_error = 0
-let g:elm_make_output_file = "elm.js"
-let g:elm_make_show_warnings = 0
-let g:elm_syntastic_show_warnings = 1
-let g:elm_browser_command = ""
-let g:elm_detailed_complete = 0
-let g:elm_format_autosave = 0
-let g:elm_format_fail_silently = 0
-let g:elm_setup_keybindings = 1
 
 """
 " Airline

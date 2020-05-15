@@ -82,19 +82,6 @@ augroup tabname
     autocmd BufEnter * TName substitute(system('basename "$PWD"'), "\@", "", "")
 augroup END
 
-"PHPDoc
-" source ~/.vim/bundle/php-doc-vim/php-doc.vim
-inoremap <Leader>p <ESC>:call PhpDocSingle()<CR>i
-nnoremap <Leader>p :call PhpDocSingle()<CR>
-vnoremap <Leader>p :call PhpDocRange()<CR>
-let g:pdv_cfg_Type = "mixed"
-let g:pdv_cfg_Package = "Webbhuset"
-let g:pdv_cfg_Version = "$id$"
-let g:pdv_cfg_Author = "Webbhuset <info@webbhuset.se>"
-let g:pdv_cfg_Copyright = "2014 Webbhuset"
-let g:pdv_cfg_License = "Proprietary"
-let g:pdv_cfg_ReturnVal = "$this"
-
 " AirLine
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
